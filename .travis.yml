@@ -4,6 +4,7 @@ jdk:
   - oraclejdk11
 branches:
   only:
+    - heroku
     - develop
     - /^release-.*$/
     - master
