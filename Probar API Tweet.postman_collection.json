@@ -7,10 +7,34 @@
 	"item": [
 		{
 			"name": "FindAllTweetsFiltrados",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apitweet.herokuapp.com/twitter/tweets",
+					"protocol": "https",
+					"host": [
+						"apitweet",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"twitter",
+						"tweets"
+					]
+				}
 			},
 			"response": []
 		},
@@ -29,16 +53,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/twitter/tweet/1",
-					"protocol": "http",
+					"raw": "https://apitweet.herokuapp.com/twitter/tweet/3",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"apitweet",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"twitter",
 						"tweet",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -49,7 +74,20 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "https://apitweet.herokuapp.com/twitter/tweets/validados",
+					"protocol": "https",
+					"host": [
+						"apitweet",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"twitter",
+						"tweets",
+						"validados"
+					]
+				}
 			},
 			"response": []
 		}

@@ -22,4 +22,9 @@ En la raíz del proyecto existe un archivo llamado: Probar API Tweet.postman_col
 
 Se puede importar en postman.
 
+Este proyecto ataca a herokuapp, las primeras peticiones tardarán porque la APP estará dormida.
+
 Este proyecto está incluido en un ciclo de devops.
+
+Tienen un archivo con las claves de Twitter para descargar el proyecto y usarlas sin necesidad de tocar nada, esto 
+está así a drede no es un fallo de seguridad posteriormente las cambiaré como variables de entorno en Heroku
