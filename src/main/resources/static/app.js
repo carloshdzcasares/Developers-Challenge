@@ -1,5 +1,5 @@
 function connect() {
-    ws = new WebSocket('ws://apitweet.herokuapp.com/tweets');
+    ws = new WebSocket('wss://apitweet.herokuapp.com/tweets');
     ws.onmessage = function (data) {
         addToUi(data.data);
     }
