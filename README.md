@@ -8,3 +8,8 @@ Developers-Challenge
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=com.chc.challenge%3Atwitter)
 
+[![Heroku broken](https://apitweet.herokuapp.com/system/version-badge)](https://apitweet.herokuapp.com/index.html)
+################################################################################################################
+
+Guía de USO :
+
