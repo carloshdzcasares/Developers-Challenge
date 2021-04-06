@@ -19,7 +19,6 @@
         <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>2.21.0</maven-failsafe-plugin.version>
         <junit.platform.version>1.2.0</junit.platform.version>
-        <java.home>C:\Program Files\Java\jdk-11.0.10\bin\javac</java.home>
     </properties>
     <dependencies>
         <dependency>
