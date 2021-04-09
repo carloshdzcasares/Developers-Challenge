@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 @Slf4j
-public class WebSocketHandler extends TextWebSocketHandler implements ApplicationListener<TwitterEstadoRecivido> {
+public class WebSocketHandler extends TextWebSocketHandler implements ApplicationListener<TwitterEstadoRecibido> {
 
     private Map<String,WebSocketSession> sessions = new ConcurrentHashMap<>();
     private ObjectWriter objectWritter;
@@ -25,9 +25,9 @@ public class WebSocketHandler extends TextWebSocketHandler implements Applicatio
     }
 
     @Override
-    public void onApplicationEvent(TwitterEstadoRecivido twitterEstadoRecivido) {
+    public void onApplicationEvent(TwitterEstadoRecibido twitterEstadoRecibido) {
         try{
-            String msg = objectWritter.writeValueAsString(twitterEstadoRecivido);
+            String msg = objectWritter.writeValueAsString(twitterEstadoRecibido);
             sendMessageToAll(msg);
         }catch (JsonProcessingException e){
             e.printStackTrace();
@@ -43,7 +43,7 @@ public class WebSocketHandler extends TextWebSocketHandler implements Applicatio
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
         super.handleTransportError(session, exception);
 
-        log.error("Se produjo un error en el remitente"+ session,exception);
+        log.error("Error en el remitente"+ session,exception);
     }
 
     @Override

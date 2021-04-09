@@ -1,7 +1,9 @@
-package com.chc.challenge.twitter.models;
+package com.chc.challenge.twitter.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import twitter4j.GeoLocation;
+import lombok.NoArgsConstructor;
 
 
 import javax.persistence.*;
@@ -9,8 +11,11 @@ import java.io.Serializable;
 
 @Data
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "tweet")
-public class Tweet implements Serializable {
+public class TweetEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
