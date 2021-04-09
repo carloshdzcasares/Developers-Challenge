@@ -4,10 +4,10 @@ import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 import twitter4j.Status;
 @Getter
-public class TwitterEstadoRecivido extends ApplicationEvent {
+public class TwitterEstadoRecibido extends ApplicationEvent {
 
     private final Status status;
-    public TwitterEstadoRecivido(Object source,Status status) {
+    public TwitterEstadoRecibido(Object source, Status status) {
         super(source);
         this.status = status;
     }

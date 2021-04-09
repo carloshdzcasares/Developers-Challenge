@@ -1,12 +1,10 @@
 package com.chc.challenge.twitter.configuration;
 
-import com.chc.challenge.twitter.configuration.TwitterListener;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import twitter4j.FilterQuery;
-import twitter4j.StatusListener;
 import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 

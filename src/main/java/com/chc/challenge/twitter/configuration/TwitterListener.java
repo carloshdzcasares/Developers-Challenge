@@ -1,8 +1,8 @@
 package com.chc.challenge.twitter.configuration;
 
 
-import com.chc.challenge.twitter.service.TweetServiceImp;
-import com.chc.challenge.twitter.webSocket.TwitterEstadoRecivido;
+import com.chc.challenge.twitter.service.FilterService;
+import com.chc.challenge.twitter.webSocket.TwitterEstadoRecibido;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
@@ -17,7 +17,7 @@ import twitter4j.StatusListener;
 public class TwitterListener implements StatusListener {
 
     @Autowired
-    TweetServiceImp tweetService;
+    FilterService filterService;
 
     private ApplicationEventPublisher applicationEventPublisher;
 
@@ -27,12 +27,10 @@ public class TwitterListener implements StatusListener {
 
     @Override
     public void onStatus(Status status) {
-        log.info("Recivido nuevo estado: " + status);
-        TwitterEstadoRecivido estadoRecivido = new TwitterEstadoRecivido(this, status);
-
-        applicationEventPublisher.publishEvent(estadoRecivido);
+        TwitterEstadoRecibido estadoRecibido = new TwitterEstadoRecibido(this, status);
+        applicationEventPublisher.publishEvent(estadoRecibido);
         log.info("Evento emitido con id: " + status.getId());
-        tweetService.saveFilterTweets(status);
+        filterService.saveFilterTweets(status);
     }
 
 

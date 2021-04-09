@@ -1,4 +1,4 @@
-package com.chc.challenge.twitter.models;
+package com.chc.challenge.twitter.entity;
 
 import lombok.Data;
 
