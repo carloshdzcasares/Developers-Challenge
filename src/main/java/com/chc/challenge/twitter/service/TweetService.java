@@ -20,16 +20,16 @@ public class TweetService {
 
     @Transactional
     public TweetEntity marcarValido(TweetEntity tweetEntity, Long id) {
-        TweetEntity tweetEntityActual = tweetRepository.findById(id).orElse(null);
+       // TweetEntity tweetEntityActual = tweetRepository.findById(id).orElse(null);
         TweetEntity tweetEntityUpdated = null;
-        if(tweetEntityActual == null){
-            return tweetEntityActual;
+        if(tweetEntity == null){
+            return tweetEntity;
         }
-        if(!tweetEntityActual.isValidacion()){
-            tweetEntityActual.setValidacion(true);
+        if(!tweetEntity.isValidacion()){
+            tweetEntity.setValidacion(true);
         }
         try{
-            tweetEntityUpdated = save(tweetEntityActual);
+            tweetEntityUpdated = save(tweetEntity);
         }catch (DataAccessException e){
             e.printStackTrace();
         }

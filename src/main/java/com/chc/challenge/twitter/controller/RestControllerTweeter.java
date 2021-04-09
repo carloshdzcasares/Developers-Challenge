@@ -17,8 +17,12 @@ public class RestControllerTweeter {
 /*    static final String TWEETER = "/api/twitter";
     static final String TWEET = RestControllerTweeter.TWEETER+"/tweets";*/
 
+
+    private TweetService tweetServiceImp;
     @Autowired
-    TweetService tweetServiceImp;
+    public RestControllerTweeter(TweetService tweetServiceImp) {
+        this.tweetServiceImp = tweetServiceImp;
+    }
 
     @GetMapping("/tweets")
     public List<TweetEntity> getAllTweets(){
