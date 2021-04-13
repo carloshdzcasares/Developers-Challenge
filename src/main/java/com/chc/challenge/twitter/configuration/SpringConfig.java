@@ -13,16 +13,7 @@ import twitter4j.conf.ConfigurationBuilder;
 
 
 @Configuration
-@PropertySource("classpath:keys.properties")
 public class SpringConfig {
-    @Value("${oauth.consumerKey}")
-    private String consumerKey;
-    @Value("${oauth.consumerSecret}")
-    private String consumerSecret;
-    @Value("${oauth.accessToken}")
-    private String oAuthAccessToken;
-    @Value("${oauth.accessTokenSecret}")
-    private String oAuthAccessTokenSecret;
     @Bean
     TwitterStreamFactory twitterStreamFactory() {
         return new TwitterStreamFactory();
@@ -31,17 +22,6 @@ public class SpringConfig {
     @Bean
     TwitterStream twitterStream(TwitterStreamFactory twitterStreamFactory) {
         return twitterStreamFactory.getInstance();
-    }
-    @Bean
-    public void configuracionKeys(){
-        ConfigurationBuilder cb = new ConfigurationBuilder();
-        cb.setDebugEnabled(true)
-                .setOAuthConsumerKey(consumerKey)
-                .setOAuthConsumerSecret(consumerSecret)
-                .setOAuthAccessToken(oAuthAccessToken)
-                .setOAuthAccessTokenSecret(oAuthAccessTokenSecret);
-        TwitterFactory tf = new TwitterFactory(cb.build());
-        Twitter twitter = tf.getInstance();
     }
 
 
