@@ -32,7 +32,7 @@ public class SpringConfig {
     TwitterStream twitterStream(TwitterStreamFactory twitterStreamFactory) {
         return twitterStreamFactory.getInstance();
     }
-
+    @Bean
     public void configuracionKeys(){
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
