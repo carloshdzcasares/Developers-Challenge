@@ -54,9 +54,12 @@ public class WebSocketHandler extends TextWebSocketHandler implements Applicatio
 
     private void sendMessageToAll(String mensaje){
         TextMessage textMessage = new TextMessage(mensaje);
+        System.out.println("Socket HERE");
         sessions.forEach((key,value) ->{
             try{
+                System.out.println("Socket" + mensaje+" "+key +" Value "+ value);
                 value.sendMessage(textMessage);
+
                 log.info("Enviar mensaje al socketID: "+mensaje,key);
             }catch (IOException e){
                 e.printStackTrace();
