@@ -1,5 +1,4 @@
-before_install:
-  - java -cp twitter4j-core-4.0.7.jar:twitter-0.0.1-SNAPSHOT.jar com.chc.challenge.twitter.TwitterApplication
+
 language: java
 jdk:
   - oraclejdk11
