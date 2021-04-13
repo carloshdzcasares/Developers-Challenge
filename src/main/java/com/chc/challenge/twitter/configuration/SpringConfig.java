@@ -13,7 +13,7 @@ import twitter4j.conf.ConfigurationBuilder;
 
 
 @Configuration
-@PropertySource("classpath:twitter4j.properties")
+@PropertySource("classpath:keys.properties")
 public class SpringConfig {
     @Value("${oauth.consumerKey}")
     private String consumerKey;
