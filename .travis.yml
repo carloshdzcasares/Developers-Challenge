@@ -18,7 +18,9 @@ install:
 dist:
   trusty
 script:
+  #Test
   - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
+  - echo "skipping tests"
   # Subir a sonarcloud
   - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=carloshdzcasares -Dsonar.login=$SONAR
 deploy:
