@@ -1,4 +1,4 @@
-/*package com.chc.challenge.twitter.controller;
+package com.chc.challenge.twitter.controller;
 
 
 import com.chc.challenge.twitter.entity.TweetEntity;
@@ -47,5 +47,5 @@ public class RestControllerTweeterTest {
        Assertions.assertEquals(tweetEntityEsperado,responseEntityModif.getBody());
     }
 
-}*/
+}
 
